@@ -28,7 +28,7 @@ function handleChoice(choice) {
             rl.question('أدخل اسم الصنف: ', (name) => {
                 const newCategory = categories.addCategory(name);
                 console.log(`تم إضافة الصنف "${newCategory.name}" بنجاح!`);
-                showMenuAndPrompt();
+             
             });
             break;
             

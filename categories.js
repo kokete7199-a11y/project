@@ -26,9 +26,13 @@ function saveData(categories) {
     }
 }
 
+
 function getAllCategories() {
     return readData();
 }
+
+
+
 
 function addCategory(name) {
     const categories = readData();
@@ -43,11 +47,15 @@ function addCategory(name) {
         id: newId,
         name: name
     };
-    
+
     categories.push(newCategory);
     saveData(categories);
     return newCategory;
 }
+
+
+
+
 
 function listCategories() {
     const categories = getAllCategories();
@@ -64,10 +72,18 @@ function listCategories() {
     console.log('================\n');
 }
 
+
+
+
+
 function findCategoryById(id) {
     const categories = getAllCategories();
     return categories.find(category => category.id === id);
 }
+
+
+
+
 
 module.exports = {
     getAllCategories,
